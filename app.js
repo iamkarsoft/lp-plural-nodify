@@ -1,15 +1,13 @@
-var express = require('express')
+const express = require('express');
 
-var app = express();
+const app = express();
 
-var port = process.env.PORT || 8976;
+const port = process.env.PORT || 8976;
 
+app.get('/', (req, res) => {
+  res.send('Hello APi');
+});
 
-// routes
-app.get('/',(req,res)=>{
-    res.send('Hello APi');
-})
-
-app.listen(port,()=>{
-        `running app on port ${port}`
-})
+app.listen(port, () => {
+  console.log(`running app on port ${port}`);
+});
