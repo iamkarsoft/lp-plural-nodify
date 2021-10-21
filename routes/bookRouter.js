@@ -47,6 +47,14 @@ bookRouter.route('/books/:bookId').get((req, res) => res.json(req.book))
     book.read = req.body.read;
     book.save();
     return res.json(book);
+  })
+  .delete((req, res) =>{
+    req.book.remove((err) =>{
+      if(err){
+        return res.send(err);
+      }
+      return res.sendStatus(204);
+    });
   });
 
 
