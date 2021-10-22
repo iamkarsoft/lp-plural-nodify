@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/**/*Tests.js",
     "lint": "eslint ."
   },
   "author": "",
@@ -17,6 +17,9 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.25.2"
+    "eslint-plugin-import": "^2.25.2",
+    "mocha": "^9.1.3",
+    "should": "^13.2.3",
+    "sinon": "^11.1.2"
   }
 }
